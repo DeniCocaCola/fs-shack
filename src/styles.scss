@@ -1,0 +1,134 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import url("https://fonts.googleapis.com/css?family=Dokdo&display=swap");
+
+html,
+body {
+  height: 100%;
+  flex: 1,0 auto;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.heavyText {
+  font-family: "Dokdo", cursive;
+}
+
+.headerTheme {
+  font-family: "Dokdo", cursive;
+  font-size: 65px;
+  display: inline-block;
+}
+//
+//
+//
+//
+//
+/****** QUICK EDIT WEBSITE COLORS ********/
+.websitePallete {
+  // Class not used. Only a reference for color codes.
+  color: #d7263d; // Rusty Red
+  color: #f46036; // Portland Orange
+  color: #2e294e; // Space Cadet
+  color: #1b998b; // Jungle Green
+  color: #c5d86d; // June Bud
+}
+
+.headerTheme {
+  //Headlines, menu header, featured specials, menu type
+  color: white; //fe5f55
+  border-style: solid;
+  border-left-color: #d7263d;
+  border-top-color: #d7263d;
+  border-bottom-style: none;
+  border-right-style: none;
+  //background-color: #1b998b;
+  //background-image: linear-gradient(to right, #c5d86d, rgba(0,0,0,0));
+}
+
+.websiteStyle {
+  background-color: #ffffff; //#336A80 - Global Background Color
+  background-image: linear-gradient(#2e294e, #1b998b);
+  padding-bottom: -40px;
+  //background-image: url("../assets/images/icons/tropical.png");
+}
+
+// NAVIGATION BAR
+.topnav {
+  background-color: transparent;
+  //background-image: url('../../assets/images/wood.jpg');
+}
+
+.container-fluid {
+  background-color: white;
+  //background-image: url('../../assets/images/wood.jpg');
+}
+
+.topnav a {
+  color: #1b998b;
+}
+
+.topnav a:hover {
+  //Background color of top navigation links when hovering.
+  // Does not affect hovering color when menu has collapsed!
+  color: #2e294e;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+// FOOTER
+.footer {
+  color: white; //Header color in footer
+  background-color: transparent;
+  //background-image: url('./assets/images/wood.jpg'); //Background image of footer
+  .col-sm {
+    a {
+      color: #ffffff; //Color of links
+    }
+    a:hover {
+      color: #ffffff; // Color of links on hover
+    }
+  }
+}
+
+// HOME CAROUSEL
+.carousel-indicators li {
+  border-color: rgba(27, 153, 139, 0.4);
+}
+.carousel-indicators .active {
+  // Active indicator on the carousel
+  border-color: #1b998b;
+  background-color: rgba(46, 41, 78, 0.6);
+}
+
+.carousel-caption {
+  // Caption text on the carousel
+  color: white;
+  text-shadow: 2px 2px 0px #030303;
+  h3 {
+    color: #f46036;
+    text-shadow: 2px 2px 0px #000000;
+    background-color: rgba(46, 41, 78, 0.6);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .carousel-caption {
+    text-shadow: 2px 2px 0px #0f0f0f;
+    h3 {
+      color: #f46036;
+      text-shadow: 4px 3px 0px #000000;
+    }
+  }
+}
+.websitePallete {
+  // Class not used. Only a reference for color codes.
+  color: #d7263d; // Rusty Red
+
+  color: #f46036; // Portland Orange
+  color: #2e294e; // Space Cadet
+  color: rgb(46, 41, 78); // Space Cadet RGB
+  color: #1b998b; // Jungle Green
+  color: #c5d86d; // June Bud
+}
