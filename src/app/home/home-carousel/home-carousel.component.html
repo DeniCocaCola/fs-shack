@@ -1,0 +1,81 @@
+<!--
+<ng-image-slider [ngClass]="{'showArrow': false}" [images]="imageObject" #nav></ng-image-slider>
+-->
+
+<div class="carouselContainer">
+    <ngb-carousel *ngIf="images">
+        <ng-template ngbSlide>
+            <div class="image-div">
+                <img [src]="images[0]" alt="*Image not found*" class="carouselImageFormat">
+            </div>
+            <div class="carousel-caption">
+                <h3>NEW! PB PANCAKES</h3>
+                <p>Peanut butter stuffed pancakes topped with a scoop of vanilla ice cream and maple syrup</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="image-div">
+                <img [src]="images[1]" alt="*Image not found*" class="carouselImageFormat">
+            </div>
+            <div class="carousel-caption">
+                <h3>NEW! PB&J FRENCH TOAST</h3>
+                <p>Try our take on the combination of two classics!</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="image-div">
+                <img [src]="images[2]" alt="*Image not found*" class="carouselImageFormat">
+            </div>
+            <div class="carousel-caption">
+                <h3>CHICKEN SKEWERS</h3>
+                <p>Applewood smoked chicken with a side of fresh locally-grown vegetables</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="image-div">
+                <img [src]="images[3]" alt="*Image not found*" class="carouselImageFormat">
+            </div>
+            <div class="carousel-caption">
+                <h3>NEW! HOT! CHILI BURGER </h3>
+                <p>1/2 Pound burger patty infused with red chilis peppers, topped off with Applewood bacon</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="image-div">
+                <img [src]="images[4]" alt="*Image not found*" class="carouselImageFormat">
+            </div>
+            <div class="carousel-caption">
+                <h3>DRINK OF THE MONTH</h3>
+                <p>$3 Lime Margaritas for all month of September</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="image-div">
+                <img [src]="images[5]" alt="*Image not found*" class="carouselImageFormat">
+            </div>
+            <div class="carousel-caption">
+                <h3>CHICKEN & PANCAKES</h3>
+                <p>They said we shouldn't, but we did anyways.</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="image-div">
+                <img [src]="images[6]" alt="*Image not found*" class="carouselImageFormat">
+            </div>
+            <div class="carousel-caption">
+                <h3>PINTO TACOS</h3>
+                <p>Enjoy four of our pinto and beef tacos, topped with fresh greens</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="image-div">
+                <img [src]="images[7]" alt="*Image not found*" class="carouselImageFormat">
+            </div>
+            <div class="carousel-caption">
+                <h3>SHISHKABOBS</h3>
+                <p>Three shishkabobs accompanied by a bowl of garlic toast, peaches, and Mediterranean salad.</p>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>
+

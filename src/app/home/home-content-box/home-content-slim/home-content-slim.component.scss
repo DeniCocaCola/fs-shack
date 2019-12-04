@@ -1,0 +1,56 @@
+.testBox {
+  position: relative;
+  margin: auto;
+  width: 70%;
+  max-width: 900px;
+  height: 130px;
+  border-style: solid;
+  border-color: #f46036;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.overlayText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  background-color: rgba(0,0,0,0.5)
+}
+
+.testBox:hover {
+  height: 160px;
+  z-index: 2;
+  .overlayText {
+    font-size: 30px;
+    animation: example 1s;
+    background-color: #f46036;
+    width: 100%;
+  }
+  img {
+    height: 300px;
+    max-height: 400px;
+  }
+}
+
+.test {
+  position: relative;
+}
+
+@keyframes example {
+  0% {
+    background-color: #d7263d;
+    width: 10%;
+    opacity: 1;
+  }
+  100% {
+    background-color: #f46036;
+    width: 100%;
+    opacity: 1;
+  }
+  //100% {background-color:red; left:0px; top:0px; opacity: 0;}
+}

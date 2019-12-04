@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Dokdo&display=swap");
+
+@media only screen and (max-width: 600px) {
+  //MOBILE SCREENS???
+  .carouselImageFormat {
+    //width: 100%;
+    width: 100vh;
+    //height: 80vh;
+    height: 100%;
+    overflow: hidden;
+    //height: 60vh; //60?
+  }
+  .carousel-caption {
+    text-align: left;
+    line-height: 25px;
+    left: 5px;
+    top: 5px;
+    h3 {
+      
+      font-family: Arial;
+      font-size: 15px;
+    }
+    p {
+      font-size: 10px;
+      background-color: rgba(0,0,0,0.4);
+    }
+  }
+}
+
+/////////////////////////////////////////////
+
+.carouselImageFormat {
+  width: 100%;
+  height: 70vh;
+  border-radius: 40px;
+}
+
+.carouselContainer {
+  margin: auto;
+  width: 100%;
+  height: 20%;
+  
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 20%;
+  height: 20px;
+  //border-radius: 0px 0px 0px 0px;
+  border-radius: 5px;
+  line-height: 5px;
+}
+
+.carousel-indicators .active {
+  display: inline-block;
+  width: 25%;
+  height: 23px;
+}
+/*
+.image-div img {
+  width: 100%;
+}
+*/
+/////////////////////////////////////////////////
+// CAROUSEL ELEMENTS
+.carousel-control-prev-icon {
+  background-image: url("../../../assets/images/icons/palm_left.png");
+  width: 100%;
+  height: 30%;
+}
+.carousel-control-next-icon {
+  background-image: url("../../../assets/images/icons/palm_right.png");
+  width: 100%;
+  height: 30%;
+}
+
+.carouselContainer {
+  width: 100%; //Width of entire element
+  height: 100%; //Keep at 100
+  padding-left: 2%;
+  padding: 2%;
+}
+.carousel-caption {
+  text-align: left;
+  left: 5px;
+  top: 5px;
+  text-shadow: 2px 2px 0px #0f0f0f;
+
+  p {
+    font-size: 25px;
+    line-height: 25px;
+    background-color: transparent;
+  }
+  h3 {
+    font-size: 80px;
+    font-family: "Dokdo", cursive;
+    background-color: transparent;
+  }
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 5%;
+  height: 20px;
+  //border-radius: 0px 0px 0px 0px;
+  border-radius: 5px;
+  line-height: 5px;
+}
+
+.carousel-indicators .active {
+  display: inline-block;
+  width: 15%;
+  height: 23px;
+}

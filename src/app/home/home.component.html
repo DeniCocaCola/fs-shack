@@ -1,0 +1,25 @@
+<div class="headerTheme">
+    FEATURED
+</div>
+
+<!--CAROUSEL-->
+<app-home-carousel></app-home-carousel>
+<br>
+<br>
+<app-home-content-box></app-home-content-box>
+<br>
+<br>
+<app-home-content-slim></app-home-content-slim>
+<hr>
+<script src="../../assets/scripts/ads.js" type="text/javascript"> </script> 
+<script type="text/javascript">
+    console.log("script running");
+    alert('Blocking Ads: No');
+    if (document.getElementById('adBanner')) {
+        console.log("nope");
+        alert('Blocking Ads: No');
+    } else {
+        console.log("ye");
+        alert('Blocking Ads: Yes');
+    }
+</script>
