@@ -1,0 +1,66 @@
+
+<div class="headerTheme">
+    {{menuTitle}}
+  </div>
+  <hr>
+  <div class="container2" *ngIf="isLoading == false">
+    <div class="row">
+      <div *ngFor="let item of items; let i = index">
+          <div class="col-sm">
+            <div class="card" id="card">
+              <div class="imgOverlayContainer">
+                <img src="{{displayArray[i].Path}}" alt="404: Image not found or still loading. Check path.">
+                <div class="overlay-text">
+                  <p>{{displayArray[i].Description}}</p>
+                </div>
+              </div>
+              <h3>{{displayArray[i].id}} <div class="itemPrice">${{displayArray[i].Price}}</div>
+              </h3>
+              <button class="btn btn-primary" (click)="addItemToCart(displayArray[i].id, displayArray[i].Price)">Order</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="loadingSpinner" *ngIf="isLoading == true">
+    <app-spinner></app-spinner>
+    <app-spacer></app-spacer>
+  </div>
+  <hr>
+<!-- 
+<div *ngFor="let item of items$ | async as items; let i = index">
+  {{i + 1}}
+  {{menuService.lunchArray[i].Description}}
+  {{menuService.lunchArray[i].Price}}
+</div> -->
+
+
+<!--
+<div class="headerTheme">
+    {{menuTitle}}
+  </div>
+  <hr>
+  <div class="container2">
+    <div class="row">
+      <div *ngFor="let element of issues">
+        <div *ngIf="element.menu === menuType">
+          <div class="col-sm">
+            <div class="card">
+              <div class="imgOverlayContainer">
+                <img src="{{element.path}}" alt="404: Image not found. Check path.">
+                <div class="overlay-text">
+                  <p>{{element.description}}</p>
+                </div>
+              </div>
+              <h3>{{element.item}} <div class="itemPrice">${{element.price}}</div>
+              </h3>
+              <button class="btn btn-primary" (click)="addItemToCart(element.item, element.price)">Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  -->

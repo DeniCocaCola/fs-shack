@@ -1,0 +1,28 @@
+
+<div class="row">
+    <div class="col-xs-12">
+            <div class="alert alert-danger" *ngIf="error">
+                    <p>{{error}}</p>
+                </div>
+        <div *ngIf="isLoading" style="text-align: center; margin: auto;">
+            <app-spinner></app-spinner> <!--Spinner located in Assets/loading-spinner -->
+        </div>
+        <form #auth="ngForm" (ngSubmit)="onSubmit(auth)" *ngIf="!isLoading">
+            <div class="form-group">
+                <label for="email">{{loginStatus ? 'Login' : 'Create an Account'}}</label>
+                <input type="email" id="email" class="form-control" placeholder="Email Address" ngModel name="email" required email />
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" class="form-control" placeholder="Password{{loginStatus ? '' : ' - Minimum of 6 Characters'}}" ngModel name="password" required
+                    minlength="6" />
+            </div>
+
+            <div>
+                <button class="btn btn-primary" type="submit"
+                    [disabled]="!auth.valid">{{loginStatus ? 'Login' : 'Register'}}</button>
+                    <button class="btn btn-primary" (click)="changeLoginStatus()" type="button">
+                    {{loginStatus ? 'Sign Up' : 'Back to Login'}}</button>
+            </div>
+        </form>
+    </div>
+</div>
