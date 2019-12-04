@@ -1,0 +1,41 @@
+.mapouter {
+  margin: auto;
+  width: 70%;
+}
+#gmap_canvas {
+  margin: auto;
+  height: 40vh;
+  width: 100%;
+  overflow: hidden;
+  background: none !important;
+}
+
+.locationInfo {
+  color: white;
+}
+
+.row {
+  padding-left: 5%;
+}
+
+.headerImg {
+  overflow: hidden;
+  min-height: 100%;
+
+  width: 100%;
+  height: auto;
+  top: 0;
+  right: 0;
+  background-size: cover;
+}
+
+.headerTheme {
+  top: 25vh;
+}
+
+.col {
+  display: table-cell;
+}
+.row {
+  display: table;
+}

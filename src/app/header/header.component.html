@@ -1,0 +1,97 @@
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav">
+
+    <a href="/home" class="active"> <img src="../../assets/images/icons/fullstack_logo.png" width="153.6" height="86.4"></a>
+    <a href="/">Menu</a>
+    <a href="/">Locations</a>
+    <a href="/">About</a>
+    <a href="javascript:void(0);" class="icon" (click)="responseFunc()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav">
+    <a routerLink="/home" class="active"> <img src="../../assets/images/icons/fullstack_logo.png" width="153.6"
+            height="86.4"></a>
+
+    <a routerLink="/menu">MENU</a>
+    <a routerLink="/locations">LOCATIONS</a>
+    <a routerLink="/about">ABOUT US</a>
+    <a routerLink="/login" *ngIf="!isAuthenticated">LOGIN</a>
+    <a routerLink="/cart">
+        <img id="cart" src="../../assets/images/icons/cart_white.png">
+        <div id="itemCount">
+            {{orderCart.itemsInCartCount}}
+        </div>
+    </a>
+    <a id="logout" *ngIf="isAuthenticated" (click)="onLogout()">
+        <img src="../../assets/images/icons/logout.png" width="40" height="40">
+    </a>
+    <a href="javascript:void(0);" class="icon" (click)="collapseFunc()">
+        <!--collapsed = !collapsed-->
+        <i class="fa fa-bars"></i>
+    </a>
+
+    <!-- THIS IS FOR HAMBURGER NAVIGATION -->
+    <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+        <ul class="nav navbar-nav">
+            <li><a routerLink="/menu" (click)="collapseFunc()">MENU</a></li>
+            <li><a routerLink="/locations" (click)="collapseFunc()">LOCATIONS</a></li>
+            <li><a routerLink="/login" (click)="collapseFunc()">LOGIN</a></li>
+            <li><a routerLink="/about" (click)="collapseFunc()">ABOUT US</a></li>
+            <li><a routerLink="/cart" (click)="collapseFunc()">CART: {{orderCart.itemsInCartCount}}</a></li>
+            <li><a id="logout_collapsed" *ngIf="isAuthenticated" (click)="onLogout()">LOGOUT</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
+                <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
+            </button>
+            <a href="/home" class="active"> <img src="../../assets/images/icons/fullstack_logo.png" width="153.6" height="86.4"></a>
+        </div>
+        <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav">
+
+    <a href="/home" class="active"> <img src="../../assets/images/icons/fullstack_logo.png" width="153.6"
+            height="86.4"></a>
+    <div class="fullLinks"></div>
+        <a href="/">Menu</a>
+        <a href="/">Locations</a>
+        <a href="/">About</a>
+
+    <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
+        <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
+        <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </button>
+</div> -->

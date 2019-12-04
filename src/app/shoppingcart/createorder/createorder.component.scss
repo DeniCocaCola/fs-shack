@@ -1,0 +1,53 @@
+h3 {
+    text-align: center;
+}
+
+.field-full-width {
+    width: 100%;
+    color: black;
+}
+.create-form {
+    button {
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 48%;
+    }
+}
+#addrCity {
+    display: block;
+}
+#stateSelector {
+    display: block;
+}
+
+.mat-warn:hover {
+    background-color: #d7263d;
+}
+
+form {
+    background-color: rgb(230, 228, 228);
+}
+mat-card {
+    background-color: rgb(230, 228, 228);
+    color: black;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    color: black !important;
+}
+::ng-deep.mat-form-field-label {
+    color: black !important;
+}
+::ng-deep.mat-form-field-underline {
+    background: black !important;
+}
+::ng-deep.mat-form-field-ripple {
+    color: black !important;
+}
+
+::ng-deep.mat-select-content {
+    color: black;
+}

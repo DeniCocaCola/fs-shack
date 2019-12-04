@@ -1,0 +1,61 @@
+<div class="headerTheme">MENU</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <a routerLink="/menu/Appetizer">
+        <div class="card">
+          <img src="../../assets/images/menu/appetizers/chicken_skewers.jpg">
+          <h3>Appetizers</h3>
+        </div>
+      </a>
+    </div>
+    <div class="col-sm">
+      <a routerLink="/menu/Breakfast">
+        <div class="card">
+          <img src="../../assets/images/menu/breakfast/hungry_combo.jpg">
+          <h3>Breakfast</h3>
+        </div>
+      </a>
+    </div>
+    <div class="col-sm">
+      <a routerLink="/menu/Lunch">
+        <div class="card">
+          <img src="../../assets/images/menu/lunch/chick_fajita.jpg">
+          <h3>Lunch</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!--NEXT ROW-->
+  <div class="row justify-content-start">
+    <div class="col-sm">
+      <a routerLink="/menu/Dessert">
+        <div class="card">
+          <img src="../../assets/images/menu/desserts/berry_cheesecake.jpg">
+          <h3>Desserts</h3>
+        </div>
+      </a>
+    </div>
+    <div class="col-sm">
+      <a routerLink="/menu/Drink">
+        <div class="card">
+          <img src="../../assets/images/menu/drinks/lime_margarita.jpg">
+          <h3>Drinks</h3>
+        </div>
+      </a>
+      <div class="col-sm">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <img class="menuSign" src="../../assets/images/sign_test.png"> -->
+
+
+<div class="tools" *ngIf="isManager">
+  <ul>
+    <h4>Menu Manager Links: </h4>
+    <li><button class="btn btn-primary" routerLink="/create">Add a Menu Item</button></li>
+    <li><button class="btn btn-warning" routerLink="/editlist">Modify/Delete an Item</button></li>
+  </ul>
+</div>

@@ -1,0 +1,43 @@
+.create-form {
+  min-width: 150px;
+  width: 100%;
+  button {
+    margin: 5px;
+  }
+}
+
+.edit-list {
+  text-align: left;
+  width: 100%;
+  padding: 20px;
+}
+
+.edit-form {
+    button {
+        margin: 5px;
+    }
+}
+.mat-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.mat-warn:hover {
+    background-color: #d7263d;
+}
+.mat-cell {
+  border-right: 1px solid black;
+}
+
+.field-full-width {
+  width: 100%;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+}
+
+p {
+  text-align: center;
+  color: white;
+}

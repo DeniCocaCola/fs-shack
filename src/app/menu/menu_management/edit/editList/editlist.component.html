@@ -1,0 +1,40 @@
+<div *ngIf="isManager">
+    <h3>Modifying the Menu</h3>
+    <p>This is the complete list of menu items. Caution when deleting items, as this cannot be undone.</p>
+
+    <table mat-table [dataSource]="issues" class="edit-list">
+        <ng-container matColumnDef="item">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-cell *matCellDef="let element">{{ element.item }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef>Description</th>
+            <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef>Price</th>
+            <td mat-cell *matCellDef="let element">{{ element.price }}</td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="path">
+            <th mat-header-cell *matHeaderCellDef>Image Path</th>
+            <td mat-cell *matCellDef="let element">{{ element.path }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef class="mat-column-right">Actions</th>
+            <td mat-cell *matCellDef="let element" class="mat-column-right">
+                <button mat-button color="accent" (click)="editIssue(element._id)">Edit</button>
+                <button mat-raised-button color="warn" (click)="confirmation(element._id)">Delete</button>
+                <!-- deleteIssue(element._id) -->
+            </td>
+        </ng-container>
+    </table>
+</div>

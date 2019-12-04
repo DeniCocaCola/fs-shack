@@ -1,0 +1,27 @@
+<div *ngIf="orderCart.isCartEmpty(); else emptyBlock">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Item</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let order of items; let i = index">
+      <tr>
+        <th scope="row">{{i + 1}}</th>
+        <td>{{orderCart.cartArray[i]}}</td>
+        <td>${{orderCart.cartPrice[i].price}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Your total cart is: ${{price}}</h3>
+  <app-createorder></app-createorder>
+</div>
+
+<ng-template #emptyBlock>
+  <h3 style="color: white; text-align: center">Your cart is currently empty.</h3>
+  <h4 style="color: white; text-align: center">Add items from the <a routerLink="/menu">Menu</a></h4>
+  <hr>
+</ng-template>
+<app-spacer></app-spacer>

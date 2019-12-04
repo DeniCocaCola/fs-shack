@@ -1,0 +1,48 @@
+<div *ngIf="isManager">
+    <br>
+    <mat-card>
+        <section class="mat-typography">
+            <h3>Update Menu Item</h3>
+        </section>
+        <mat-divider></mat-divider>
+        <br>
+        <form [formGroup]="updateForm" class="edit-form">
+            <mat-form-field class="field-full-width">
+                <input matInput placeholder="Modify Item DB ID (Advanced Usage Only)" formControlName="id" #id>
+            </mat-form-field>
+            <mat-form-field class="field-full-width">
+                <input matInput placeholder="Name of Item" formControlName="item" #item>
+            </mat-form-field>
+
+            <mat-form-field class="field-full-width">
+                <input matInput placeholder="Price" formControlName="price" #price>
+            </mat-form-field>
+
+            <mat-form-field class="field-full-width">
+                <input matInput placeholder="Path" formControlName="path" #path>
+            </mat-form-field>
+
+            <mat-form-field class="field-full-width">
+                <textarea matInput placeholder="Description" formControlName="description" #description>
+                </textarea>
+            </mat-form-field>
+                
+            <mat-form-field>
+                <mat-select placeholder="Menu" formControlerName="menu" #menu>
+                    <mat-option value="Appetizer">Appetizer</mat-option>
+                    <mat-option value="Breakfast">Breakfast</mat-option>
+                    <mat-option value="Lunch">Lunch</mat-option>
+                    <mat-option value="Dessert">Dessert</mat-option>
+                    <mat-option value="Drinks">Drinks</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-divider></mat-divider>
+            <br><br>
+            <button mat-raised-button color="accent" routerLink="/editlist">Back to Menu</button>
+            <button type="submit" 
+            (click)="updateIssue(item.value, price.value, path.value, description.value, menu.selected.value)" 
+            [disabled]="updateForm.pristine || updateForm.invalid"
+            mat-raised-button color="primary">Save</button>
+        </form>
+    </mat-card>
+</div>

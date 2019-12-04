@@ -1,0 +1,54 @@
+
+<div class="headerTheme">
+  {{menuTitle}}
+</div>
+<hr>
+<div class="container2">
+  <div class="row">
+    <div *ngFor="let element of issues">
+      <div *ngIf="element.menu === menuType">
+        <div class="col-sm">
+          <div class="card">
+            <div class="imgOverlayContainer">
+              <img src="{{element.path}}" alt="404: Image not found. Check path.">
+              <div class="overlay-text">
+                <p>{{element.description}}</p>
+              </div>
+            </div>
+            <h3>{{element.item}} <div class="itemPrice">${{element.price}}</div>
+            </h3>
+            <button class="btn btn-primary" (click)="addItemToCart(element.item, element.price)">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<!-- 
+<div class="headerTheme">
+  {{menuTitle}}
+</div>
+<hr>
+<div class="container2">
+  <div class="row">
+    <div *ngFor="let element of issues">
+      <div *ngIf="element.menu === menuType">
+        <div class="col-sm">
+          <div class="card">
+            <img src="{{element.path}}" alt="404: Image not found. Check path.">
+            <h3>{{element.item}} <div class="itemPrice">{{element.price}}</div>
+            </h3>
+            <p>{{element.description}}</p>
+            <button class="btn btn-primary" routerLink="/pagenotfound">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+
+
+
+-->

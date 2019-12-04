@@ -1,0 +1,62 @@
+<div *ngIf="isManager">
+    <h3>Modifying the Menu</h3>
+    <p>Instructions:
+        All fields MUST be filled out.
+        Images should be placed correctly within the assets folder,
+        else the image will not appear on the menu page.
+    </p>
+    <p>
+        Only use this form if you intend to add an item to the menu.
+        Use the appropriate form for updating or deleting items.
+    </p>
+    <button class="btn btn-warn" (click)="switchDatabase()">LocalHost / Online DB</button>
+
+    <div class="container">
+        <br>
+        <mat-card>
+            <section class="mat-typography">
+                <h3>Add a Menu Item - {{currentDB}}</h3>
+            </section>
+            <mat-divider></mat-divider>
+            <br>
+            <form [formGroup]="createForm" class="create-form">
+                <mat-form-field class="field-full-width">
+                    <input matInput placeholder="Name of Item" formControlName="item" #item>
+                </mat-form-field>
+
+                <mat-form-field class="field-full-width">
+                    <input matInput placeholder="Price (Include Currency)" formControlName="price" #price>
+                </mat-form-field>
+
+                <mat-form-field class="field-full-width">
+                    <input matInput placeholder="Image Path [../../assets/images/menu/*menuType*]"
+                        formControlName="path" #path>
+                </mat-form-field>
+                <mat-form-field class="field-full-width">
+                    <textarea matInput placeholder="Description" formControlName="description" #description>
+                </textarea>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-select placeholder="Menu" formControlerName="menu" #menu>
+                        <mat-option value="Appetizer">Appetizer</mat-option>
+                        <mat-option value="Breakfast">Breakfast</mat-option>
+                        <mat-option value="Lunch">Lunch</mat-option>
+                        <mat-option value="Dessert">Dessert</mat-option>
+                        <mat-option value="Drink">Drinks</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-divider></mat-divider>
+                <br><br>
+                <button mat-raised-button color="accent" routerLink="/menu">Back</button>
+                <button *ngIf="currentDB == 'Local'" type="submit" (click)="addItemLocal(item.value, price.value, path.value,
+            description.value, menu.value)" [disabled]="createForm.pristine || createForm.invalid" mat-raised-button
+                    color="primary">Save to local</button>
+                <button *ngIf="currentDB == 'Firebase'" type="submit" (click)="addItemFirebase(item.value, price.value, path.value,
+            description.value, menu.value)" [disabled]="createForm.pristine || createForm.invalid" mat-raised-button
+                    color="primary">Save to Firebase</button>
+            </form>
+        </mat-card>
+    </div>
+</div>

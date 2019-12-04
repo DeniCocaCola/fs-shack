@@ -1,0 +1,52 @@
+<div class="container">
+  <br>
+  <mat-card>
+    <section class="mat-typography">
+      <h3>Place an Order for Delivery</h3>
+    </section>
+    <mat-divider></mat-divider>
+    <br>
+    <form [formGroup]="createForm" class="create-form">
+
+        <mat-form-field class="field-full-width">
+            <input matInput placeholder="Enter your Email Address" formControlName="email" #email>
+          </mat-form-field>
+
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Phone Number" formControlName="userPhone" #userPhone>
+      </mat-form-field>
+
+      <mat-form-field class="field-full-width">
+          <input matInput placeholder="Address" formControlName="address" #address>
+        </mat-form-field>
+
+        <mat-form-field class="field-full-width" id="addrCity">
+            <input matInput placeholder="City" formControlName="addrCity" #addrCity>
+          </mat-form-field>
+
+          <mat-form-field id="stateSelector">
+              <mat-select placeholder="State - Only Ohio" formControlerName="addrState" #addrState>
+                  <mat-option value="Ohio">OH</mat-option>
+              </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="field-full-width">
+              <input matInput placeholder="Postal Code" formControlName="postalCode" #postalCode>
+            </mat-form-field>
+
+      <mat-form-field class="field-full-width">
+        <textarea matInput placeholder="Special instructions" formControlName="instructions" #instructions>
+              </textarea>
+      </mat-form-field>
+
+      <mat-divider></mat-divider>
+      <br><br>
+      <!--
+      <button mat-raised-button color="accent" routerLink="/home">Back</button>
+      -->
+      <button type="submit"
+        (click)="addOrder(email.value, userPhone.value, address.value, addrCity.value, postalCode.value, instructions.value)"
+         mat-raised-button color="warn">Place Order</button>
+    </form>
+  </mat-card>
+</div>

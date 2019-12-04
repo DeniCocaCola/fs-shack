@@ -1,0 +1,85 @@
+p {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.col-sm {
+  padding: 10px;
+}
+@media screen and (min-width: 444px) and (max-width: 1032px) {
+  .col-sm {
+    padding: 5px;
+  }
+  .container2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 443px) {
+  
+}
+.container2 {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  display: inline-block; //inline block
+  width: 400px;
+  height: 300px; //300
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  background-color: #c5d86d;
+  img {
+    border-radius: 5px;
+    padding: 1px 1px 1px 1px;
+    width: 395px;
+    height: 295px;
+  }
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+h3 {
+  color: #c5d86d;
+}
+.itemPrice {
+  color: #f46036;
+}
+
+button {
+  width: 80%;
+  bottom: 0px;
+  color: white;
+  background-color: #f46036;
+}
+button:hover {
+  font-weight: bold;
+  background-color: #d7263d;
+}
+
+.card:hover .overlay-text{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+
+}
+
+.overlay-text {
+  display: none;
+}
+
+.row {
+  margin-left: 20%;
+  margin-right: 20%;
+}
