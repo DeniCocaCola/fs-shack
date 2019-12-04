@@ -1,0 +1,30 @@
+.mat-toolbar {
+    color: white;
+    background: #E24128;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav {
+    float: right;
+}
+
+matMenu {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 12px;
+}
+a:link {
+    padding: 1em;
+    color: lightseagreen; /*Click on color*/
+    text-decoration: none;
+}
+a:visited {
+    color: lightseagreen;
+}
+a.hover {
+    color: seagreen;
+}
+
